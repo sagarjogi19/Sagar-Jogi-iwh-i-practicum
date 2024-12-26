@@ -1,0 +1,20 @@
+doctype html
+html
+  head
+    title= title
+    link(rel="stylesheet", href="/css/style.css")
+  body
+    h1 Custom Object Table
+    a(href="/update-cobj") Add/Update this table
+    table
+      thead
+        tr
+          th Wordmark Specification Text
+          th Region
+          th Classes
+      tbody
+        each record in records
+          tr
+            td= record.properties.word_mark_specification_text
+            td= record.properties.region
+            td= record.properties.classes

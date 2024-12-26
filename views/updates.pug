@@ -1,0 +1,19 @@
+doctype html
+html
+  head
+    title= title
+    link(rel="stylesheet", href="/css/style.css")
+  body
+    h1= title
+    a(href="/") Return to the homepage
+    form(action="/update-cobj" method="post")
+      div
+        label(for="word_mark_specification_text") Wordmark Specification Text:
+        input(type="text" id="word_mark_specification_text" name="word_mark_specification_text" required)
+      div
+        label(for="region") Region:
+        input(type="text" id="region" name="region" required)
+      div
+        label(for="classes") Classes:
+        input(type="text" id="classes" name="classes" required)
+      button(type="submit") Submit
